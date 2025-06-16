@@ -1,0 +1,103 @@
+document.addEventListener("DOMContentLoaded", function () {
+  // function setupToggleButton() {
+  //   const mobileMenu = document.querySelector("header nav .mobile-menu");
+  //   const menu = document.querySelector("header nav .menu");
+  //   mobileMenu.addEventListener("click", function () {
+  //     menu.classList.toggle("show");
+  //   });
+  //   // Remove class kalau diklik diluar
+  //   document.addEventListener("click", function (event) {
+  //     if (!menu.contains(event.target) && !mobileMenu.contains(event.target)) {
+  //       menu.classList.remove("show");
+  //     }
+  //   });
+  // }
+});
+
+document.getElementById("checkout-btn").addEventListener("click", function () {
+  const cartItemsData = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+  if (cartItemsData.length === 0) {
+    alert("Keranjang kosong! Silakan tambahkan item terlebih dahulu.");
+    return;
+  }
+
+  // ✅ Fungsi checkout berhasil
+  alert("Terima kasih! Pesanan Anda sedang diproses.");
+
+  // Hapus isi keranjang setelah checkout
+  localStorage.removeItem("cartItems");
+
+  // Tutup modal dan perbarui tampilan jumlah item di ikon keranjang
+  closeModal();
+  updateCartCount(); // Pastikan fungsi ini ada di file JS kamu
+});
+
+
+// Hero button smooth scroll to #recent
+window.addEventListener("DOMContentLoaded", (event) => {
+  document
+    .querySelector("#hero .text .button")
+    .addEventListener("click", function () {
+      var targetElement = document.querySelector("#best");
+      var targetOffset = targetElement.offsetTop - 60;
+      window.scrollTo({
+        top: targetOffset,
+        behavior: "smooth",
+      });
+    });
+});
+
+// Testimonial Slider
+
+var testimonials = document.querySelectorAll(".testimonial");
+var navigationContainer = document.querySelector(".navigation");
+var currentIndex = 0;
+function showTestimonial(index) {
+  var navigationButtons = navigationContainer.querySelectorAll("button");
+  navigationButtons.forEach(function (button) {
+    button.classList.remove("active");
+  });
+  navigationButtons[index].classList.add("active");
+  var testimonialContainer = document.querySelector(".slider-container");
+  testimonialContainer.style.transform = "translateX(-" + index * 100 + "%)";
+}
+function nextTestimonial() {
+  currentIndex++;
+  if (currentIndex >= testimonials.length) {
+    currentIndex = 0;
+  }
+  showTestimonial(currentIndex);
+}
+var autoplayInterval = setInterval(nextTestimonial, 3000);
+testimonials.forEach(function (testimonial, index) {
+  var button = document.createElement("button");
+  button.addEventListener("click", function () {
+    clearInterval(autoplayInterval);
+    currentIndex = index;
+    showTestimonial(index);
+  });
+  navigationContainer.appendChild(button);
+});
+showTestimonial(currentIndex);
+
+fetch("./menu.html", { mode: "no-cors" })
+  .then((response) => response.text())
+  .then((data) => {
+    const menuWrapElement = new DOMParser()
+      .parseFromString(data, "text/html")
+      .querySelector(".menu-wrap");
+    const bestProductElements = Array.from(
+      menuWrapElement.querySelectorAll(".product.best")
+    );
+    const indexContainer = document.getElementById("index-container");
+    bestProductElements.forEach((product) => {
+      indexContainer.appendChild(product);
+    });
+  });
+
+setTimeout(() => {
+  const scriptElement = document.createElement("script");
+  scriptElement.src = "./src/js/menu.js";
+  document.body.appendChild(scriptElement);
+}, 5000);
