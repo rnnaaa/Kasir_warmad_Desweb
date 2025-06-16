@@ -63,18 +63,24 @@ document.addEventListener("DOMContentLoaded", function () {
     product.classList.add(categoryText);
   });
 
+  // Ganti event listener tab dengan ini:
   const tabs = document.querySelectorAll(".tab > p");
   tabs.forEach((tab) => {
     tab.addEventListener("click", function () {
-      if (!this.classList.contains("active")) {
-        tabs.forEach((t) => t.classList.remove("active"));
-        this.classList.add("active");
+      tabs.forEach((t) => t.classList.remove("active"));
+      this.classList.add("active");
 
-        const tabClass = this.className;
-        products.forEach((product) => {
-          product.style.display = tabClass === "all" || product.classList.contains(tabClass) ? "block" : "none";
-        });
-      }
+      const category = this.textContent.trim();
+      const categoryClass = category === "All Menu" ? "" : category.toLowerCase().replace(/\s+/g, "-");
+
+      products.forEach((product) => {
+        const productCategory = product.querySelector(".category").textContent.trim().toLowerCase().replace(/\s+/g, "-");
+        if (category === "All Menu" || productCategory === categoryClass) {
+          product.style.display = "block";
+        } else {
+          product.style.display = "none";
+        }
+      });
     });
   });
 
