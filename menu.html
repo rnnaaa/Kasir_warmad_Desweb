@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Warung Madura</title>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link media="all" rel="stylesheet" href="./src/css/all.css" />
+    <link media="all" rel="stylesheet" href="./src/css/fontawesome.css" />
+<link rel="stylesheet" href="./src/css/about-us.css" />
+    <link media="all" rel="stylesheet" href="./src/css/menu.css" />
+    <link media="all" rel="stylesheet" href="./src/css/product.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="header-wrap">
+        <div class="mobile-nav">
+          <i class="fas fa-bars"></i>
+        </div>
+        <div class="logo">
+          <a href="/">
+            <img src="assets/Logo.png" alt="Warung Madura" />
+          </a>
+        </div>
+        <nav>
+          <div class="nav-wrap">
+            <a href="./index.html">Home</a>
+            <a href="./menu.html">Menu</a>
+            <a href="./about-us.html">Tentang Kami</a>
+            <a href="./contact-us.html">Kontak</a>
+          </div>
+        </nav>
+        <div class="cart-button">
+          <svg width="73" height="74" viewBox="0 0 73 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M12.1665 12.6667H20.0249C20.6332 12.6667 20.9374 12.6667 21.1574 12.8385C21.3774 13.0103 21.4512 13.3053 21.5987 13.8955L23.7188 22.3758C24.0138 23.5561 24.1614 24.1462 24.6014 24.4898C25.0415 24.8334 25.6498 24.8334 26.8664 24.8334H30.4165"
+              stroke="#222"
+              stroke-width="3.24444"
+              stroke-linecap="round"
+            />
+            <path
+              d="M54.75 52.2083H20.5007C19.4737 52.2083 18.9601 52.2083 18.7173 51.8715C18.4746 51.5346 18.637 51.0474 18.9617 50.0731L20.5522 45.3018C20.9091 44.2311 21.0875 43.6957 21.5124 43.3895C21.9372 43.0833 22.5015 43.0833 23.6301 43.0833H42.5833"
+              stroke="#222"
+              stroke-width="3.24444"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M50.7056 43.0833H25.7074C24.9144 43.0833 24.2376 42.51 24.1072 41.7278L21.5276 26.25C21.404 25.5084 21.9759 24.8333 22.7277 24.8333H59.5208C60.1237 24.8333 60.5159 25.4679 60.2462 26.0072L52.1565 42.1866C51.8818 42.7362 51.32 43.0833 50.7056 43.0833Z"
+              stroke="#222"
+              stroke-width="3.24444"
+              stroke-linecap="round"
+            />
+            <circle cx="51.7082" cy="61.3334" r="3.04167" fill="#222" />
+            <circle cx="27.3752" cy="61.3334" r="3.04167" fill="#222" />
+          </svg>
+          <span id="cart-count" class="cart-count"></span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="wrap">
+        <h2 class="title">Menu</h2>
+
+        <div class="menu-wrap">
+          <div class="tab"></div>
+
+          <div class="overlay" onclick="closePopup()"></div>
+          <div class="popup"></div>
+          <div class="menu-list">
+            <div class="product">
+              <div class="product-wrap">
+                <div class="img">
+                  <img src="https://th.bing.com/th/id/OIP.1ebP2Gf0Gcu7gJfBFuiLeAHaHa?w=182&h=182&c=7&r=0&o=5&pid=1.7" />
+                </div>
+                <h3>Beras Teratai 1kg</h3>
+                <p class="category">Beras</p>
+                <div class="product-choice">
+                  
+                </div>
+                <div class="price">Rp 15.000</div>
+              </div>
+            </div>
+
+            <div class="product">
+              <div class="product-wrap">
+                <div class="img">
+                  <img
+                    src="assets/BerasPisang1kg.jpeg" alt="Beras Pisang 1kg"
+                  />
+                </div>
+                <h3>Beras Pisang 1kg</h3>
+                <p class="category">Beras</p>
+                <div class="product-choice">
+                  
+                </div>
+                <div class="price">Rp 15.000</div>
+              </div>
+            </div>
+
+            <div class="product">
+              <div class="product-wrap">
+                <div class="img">
+                  <img src="assets/BerasHappy1kg.jpeg" alt="Beras Happy 1kg" />
+                </div>
+                <h3>Beras Happy 1kg</h3>
+                <p class="category">Beras</p>
+                <div class="product-choice">
+                 
+                </div>
+                <div class="price">Rp 14.000</div>
+              </div>
+            </div>
+
+            <div class="product">
+              <div class="product-wrap">
+                <div class="img">
+                  <img src="assets/BerasMaknyus1kg.jpeg" alt="Beras Maknyus 1kg"/>
+                </div>
+                <h3>Beras Maknyus 5kg</h3>
+                <p class="category">Beras</p>
+                <div class="product-choice"></div>
+                <div class="price">Rp 115.000</div>
+              </div>
+            </div>
+
+            <div class="product best">
+              <div class="product-wrap">
+                <div class="img">
+                  <img src="assets/BerasRaja1kg.jpeg" alt="Beras Raja 5kg"/> 
+                </div>
+                <h3>Beras Raja 1kg</h3>
+                <p class="category">Beras</p>
+                <div class="product-choice"></div>
+                <div class="price">Rp 14.000</div>
+              </div>
+            </div>
+
+            <div class="product best">
+              <div class="product-wrap">
+                <div class="img">
+                  <img
+                    src="assets/BerasMacanTerbang1kg.jpeg" alt="Beras Macan Terbang 1kg"/>
+                  </div>
+                <h3>Beras macan terbang 1kg</h3>
+                <p class="category">Beras</p>
+                <div class="product-choice">
+                </div>
+                <div class="price">Rp 13.000</div>
+              </div>
+            </div>
+
+            <div class="product">
+              <div class="product-wrap">
+                <div class="img">
+                  <img src="assets/Gulaku.jpeg" alt="Gulaku"/>
+                </div>
+                <h3>Gula</h3>
+                <p class="category">Bumbu</p>
+                <div class="product-choice">
+                </div>
+                <div class="price">Rp 16.000</div>
+              </div>
+            </div>
+
+            <div class="product">
+              <div class="product-wrap">
+                <div class="img">
+                  <img src="assets/Garam.jpeg" alt="Garam"/> 
+                </div>
+                <h3>Garam</h3>
+                <p class="category">Bumbu</p>
+                <div class="product-choice">
+                 
+                </div>
+                <div class="price">Rp 1.500</div>
+              </div>
+            </div>
+
+            <div class="product">
+              <div class="product-wrap">
+                <div class="img">
+                  <img
+                    src="assets/Micin.jpeg" alt="Micin"/>  
+                </div>
+                <h3>Micin</h3>
+                <p class="category">Bumbu</p>
+                <div class="product-choice"></div>
+                <div class="price">Rp 1.000</div>
+              </div>
+            </div>
+
+            <div class="product">
+              <div class="product-wrap">
+                <div class="img">
+                  <img src="assets/Royco.webp" alt="Royco"/>  
+                </div>
+                <h3>Royco</h3>
+                <p class="category">Bumbu</p>
+                <div class="product-choice">
+                  
+                </div>
+                <div class="price">Rp 1.000</div>
+              </div>
+            </div>
+
+            <div class="product">
+              <div class="product-wrap">
+                <div class="img">
+                  <img src="assets/Ladaku.jpeg" alt="Ladaku" />
+                </div>
+                <h3>Ladaku</h3>
+                <p class="category">Bumbu</p>
+                <div class="product-choice">
+                  
+                </div>
+                <div class="price">Rp 1.500</div>
+              </div>
+            </div>
+
+            <div class="product">
+              <div class="product-wrap">
+                <div class="img">
+                  <img src="assets/Sauri.jpeg" alt="Sauri"/> 
+                </div>
+                <h3>Saori Saus Tiram</h3>
+                <p class="category">Bumbu</p>
+                <div class="product-choice">
+                 
+                </div>
+                <div class="price">Rp 2.000</div>
+              </div>
+            </div>
+
+            <div class="product">
+              <div class="product-wrap">
+                <div class="img">
+                  <img
+                    src="assets/Kecap.jpeg" alt="Kecap"/>
+                </div>
+                <h3>Kecap Sedap</h3>
+                <p class="category">Bumbu</p>
+                <div class="product-choice">
+                  </div>
+                <div class="price">Rp 2.000</div>
+              </div>
+            </div>
+
+            <div class="product">
+              <div class="product-wrap">
+                <div class="img">
+                  <img src="assets/Saos.jpeg" alt="Saos"/>
+                  </div>
+                <h3>Saos</h3>
+                <p class="category">Bumbu</p>
+                <div class="product-choice">
+                 
+                </div>
+                <div class="price">Rp 5.000</div>
+              </div>
+            </div>
+
+            <div class="product">
+              <div class="product-wrap">
+                <div class="img">
+                  <img src="assets/MiSedapgoreng.jpeg" alt="Mi sedap goreng"/>  
+                </div>
+                <h3>Mie sedap goreng</h3>
+                <p class="category">Mie Instan</p>
+                <div class="product-choice">
+                 
+                </div>
+                <div class="price">Rp 3.500</div>
+              </div>
+            </div>
+
+            <div class="product best">
+              <div class="product-wrap">
+                <div class="img">
+                  <img src="assets/MiSedapKuah.jpeg" alt="Mi sedap kuah"/>  
+                </div>
+                <h3>Mie sedap kuah</h3>
+                <p class="category">Mie Instan</p>
+                <div class="product-choice">
+                </div>
+                <div class="price">Rp 3.500</div>
+              </div>
+            </div>
+
+            <div class="product">
+              <div class="product-wrap">
+                <div class="img">
+                  <img
+                    src="assets/IndomiGoreng.jpeg" alt="IndomiGoreng"/>
+                </div>
+                <h3>Indomie Goreng</h3>
+                <p class="category">Mie Instan</p>
+                <div class="product-choice">
+                </div>
+                <div class="price">Rp 3.500</div>
+              </div>
+            </div>
+
+            <div class="product">
+              <div class="product-wrap">
+                <div class="img">
+                  <img src="assets/IndomiSoto.jpeg" alt="Indomie Kuah"/>  
+                </div>
+                <h3>Indomie kuah</h3>
+                <p class="category">Mie Instan</p>
+                <div class="product-choice">
+                                 </div>
+                <div class="price">Rp 3.500</div>
+              </div>
+            </div>
+
+            <div class="product">
+              <div class="product-wrap">
+                <div class="img">
+                  <img src="assets/IndomiHypeabis.jpeg" alt="Indomie Hype abis"/>  
+                </div>
+                <h3>Hype abies</h3>
+                <p class="category">Mie Instan</p>
+                <div class="product-choice">
+                 
+                </div>
+                <div class="price">Rp 3.500</div>
+              </div>
+            </div>
+
+            <div class="product best">
+              <div class="product-wrap">
+                <div class="img">
+                  <img src="assets/Indomiseblak.jpeg" alt="Indomiseblak"/>  
+                </div>
+                <h3>Seblak Hot Jeletot</h3>
+                <p class="category">Mie Instan</p>
+                <div class="product-choice">
+                  
+                </div>
+                <div class="price">Rp 3.500</div>
+              </div>
+            </div>
+
+            <div class="product">
+              <div class="product-wrap">
+                <div class="img">
+                  <img src="assets/IndomiKari.jpeg" alt="IndomiKari"/>  
+                </div>
+                <h3>Kare ayam</h3>
+                <p class="category">Mie Instan</p>
+                <div class="product-choice">
+                  
+                </div>
+                <div class="price">Rp 3.500</div>
+              </div>
+            </div>
+
+            <div class="product">
+              <div class="product-wrap">
+                <div class="img">
+                  <img src="assets/Indomiaceh.jpeg" alt="Indomiaceh"/>  
+                </div>
+                <h3>Goreng aceh</h3>
+                <p class="category">Mie Instan</p>
+                <div class="product-choice">
+                  
+                </div>
+                <div class="price">Rp 3.500</div>
+              </div>
+            </div>
+
+            <div class="product best">
+              <div class="product-wrap">
+                <div class="img">
+                  <img
+                    src="assets/Indomisambelijo.jpeg" alt="Indomisambelijo"/>  
+                    </div>
+                <h3>Sambel ijo</h3>
+                <p class="category">Mie Instan</p>
+                <div class="product-choice">
+                 
+                </div>
+                <div class="price">Rp 3.500</div>
+              </div>
+            </div>
+
+            <div class="product best">
+              <div class="product-wrap">
+                <div class="img">
+                  <img src="assets/MiSukses.jpeg" alt="MiSukses"/>  
+                </div>
+                <h3>Sukses isi 2</h3>
+                <p class="category">Mie Instan</p>
+                <div class="price">Rp 5.000</div>
+              </div>
+            </div>
+
+            <div class="product">
+              <div class="product-wrap">
+                <div class="img">
+                  <img src="assets/Rinso.jpeg" alt="Rinso"/>
+                </div>
+                <h3>Rinso</h3>
+                <p class="category">Sabun&Shampo</p>
+                <div class="price">Rp 5.000</div>
+              </div>
+            </div>
+
+            <div class="product best">
+              <div class="product-wrap">
+                <div class="img">
+                  <img
+                    src= "assets/Mamalemon.jpeg" alt="Mamalemon"/>  
+                </div>
+                <h3>Mama lemon</h3>
+                <p class="category">Sabun&Shampo</p>
+                <div class="price">Rp 2.000</div>
+              </div>
+            </div>
+
+            <div class="product">
+              <div class="product-wrap">
+                <div class="img">
+                  <img src="assets/Boom.jpeg" alt="Boom"/> 
+                </div>
+                <h3>Boom</h3>
+                <p class="category">Sabun&Shampo</p>
+                <div class="price">Rp 5.000</div>
+              </div>
+            </div>
+
+            <div class="product">
+              <div class="product-wrap">
+                <div class="img">
+                  <img src="assets/sayang.jpeg" alt="Sayang"/> 
+                </div>
+                <h3>Sayang</h3>
+                <p class="category">Sabun&Shampo</p>
+                <div class="price">Rp 5.000</div>
+              </div>
+            </div>
+
+            <div class="product">
+              <div class="product-wrap">
+                <div class="img">
+                  <img src="assets/Sampolifebuoy.jpeg" alt="Sampolifebuoy"/> 
+                </div>
+                <h3>Sampo Lifebuoy</h3>
+                <p class="category">Sabun&Shampo</p>
+                <div class="price">Rp 1.000</div>
+              </div>
+            </div>
+            
+            <div class="product">
+              <div class="product-wrap">
+                <div class="img">
+                  <img src="assets/Samposunslik.jpeg" alt="Samposunslik"/> 
+                </div>
+                <h3>Sampo Sunslik </h3>
+                <p class="category">Sabun&Shampo</p>
+                <div class="price">Rp 1.000</div>
+              </div>
+            </div>
+
+            <div class="product">
+              <div class="product-wrap">
+                <div class="img">
+                  <img src="assets/Sampozinc.jpeg" alt="Sampo zinc"/> 
+                </div>
+                <h3>Sampo Zinc</h3>
+                <p class="category">Sabun&Shampo</p>
+                <div class="price">Rp 1.000</div>
+              </div>
+            </div>
+
+            <div class="product">
+              <div class="product-wrap">
+                <div class="img">
+                  <img src="assets/Soklin.jpeg" alt="Soklin"/> 
+                   </div>
+                <h3>Soklin liquid</h3>
+                <p class="category">Sabun&Shampo</p>
+                <div class="price">Rp 1.000</div>
+              </div>
+            </div>
+
+             <div class="product">
+              <div class="product-wrap">
+                <div class="img">
+                  <img src="assets/Nabati.jpeg" alt="Nabati"/>
+                </div>
+                <h3>Nabati</h3>
+                <p class="category">Snack&Ciki</p>
+                <div class="product-choice">
+                </div>
+                <div class="price">Rp 16.000</div>
+              </div>
+            </div>
+
+            <div class="product best">
+              <div class="product-wrap">
+                <div class="img">
+                  <img src="assets/Pocky.jpeg" alt="Pocky"/> 
+                </div>
+                <h3>Pocky</h3>
+                <p class="category">Snack&Ciki</p>
+                <div class="price">Rp 8.000</div>
+              </div>
+            </div>
+
+            <div class="product best">
+              <div class="product-wrap">
+                <div class="img">
+                  <img src="assets/Chocolatos.jpeg" alt="Chocolatos"/> 
+                </div>
+                <h3>Chocolatos</h3>
+                <p class="category">Snack&Ciki</p>
+                <div class="price">Rp 1.000</div>
+              </div>
+            </div>
+
+            <div class="product best">
+              <div class="product-wrap">
+                <div class="img">
+                  <img src="assets/Chikiball.jpeg" alt="Chikiball"/>  
+                </div>
+                <h3>Chikiball</h3>
+                <p class="category">Snack&Ciki</p>
+                <div class="price">Rp 3.000</div>
+              </div>
+            </div>
+
+            <div class="product best">
+              <div class="product-wrap">
+                <div class="img">
+                  <img
+                    src="assets/Frenchfries.jpeg" alt="Frenchfries"/> 
+                </div>
+                <h3>Frenchfries</h3>
+                <p class="category">Snack&Ciki</p>
+                <div class="price">Rp 3.000</div>
+              </div>
+            </div>
+
+            <div class="product best">
+              <div class="product-wrap">
+                <div class="img">
+                  <img
+                    src="assets/Sarigandum.jpeg" alt="Sarigandum"/> 
+                </div>
+                <h3>Sari gandum</h3>
+                <p class="category">Snack&Ciki</p>
+                <div class="price">Rp 4.000</div>
+              </div>
+            </div>
+
+            <div class="product best">
+              <div class="product-wrap">
+                <div class="img">
+                  <img src="assets/Doritos.jpeg" alt="Doritos"/> 
+                </div>
+                <h3>Doritos</h3>
+                <p class="category">Snack&Ciki</p>
+                <div class="price">Rp 10.000</div>
+              </div>
+            </div>
+
+            <div class="product best">
+              <div class="product-wrap">
+                <div class="img">
+                  <img src="assets/Biskuat.jpeg" alt="Biskuat"/> 
+                </div>
+                <h3>Biskuat</h3>
+                <p class="category">Snack&Ciki</p>
+                <div class="price">Rp 1.000</div>
+              </div>
+            </div>
+
+
+            <div class="product best">
+              <div class="product-wrap">
+                <div class="img">
+                  <img src="assets/Superstar.jpeg" alt="Superstar"/> 
+                </div>
+                <h3>Superstar</h3>
+                <p class="category">Snack&Ciki</p>
+                <div class="price">Rp 1.000</div>
+              </div>
+            </div>
+
+            <div class="product best">
+              <div class="product-wrap">
+                <div class="img">
+                  <img
+                    src="assets/Tictic.jpeg" alt="Tic-tic"/> 
+                </div>
+                <h3>Tic-tic</h3>
+                <p class="category">Snack&Ciki</p>
+                <div class="price">Rp 2.000</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Modal HTML structure -->
+  <div id="cartModal" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Keranjang Belanja</h2>
+      <span class="close">&times;</span>
+    </div>
+    <div id="cartItemsContainer" class="cart-items">
+      <!-- Items will be inserted here by JavaScript -->
+    </div>
+    <div class="modal-footer">
+      <div class="total-section">
+        <div class="total-row">
+          <span>Total:</span>
+          <span id="total-price">Rp 0</span>
+        </div>
+        <button id="checkout-btn" class="checkout-button">
+          <i class="fas fa-credit-card"></i> Checkout
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <!-- Bagian footer dan script tetap sama -->
+</html>
+<footer class="footer">
+  <div class="footer-wave"></div>
+  
+  <div class="footer-container">
+    <!-- Brand Section -->
+    <div class="footer-brand">
+      <h2 class="footer-logo">Warung Madura Umar Faruq</h2>
+      <p class="footer-tagline">Tempat paling setia setelah rumah</p>
+      
+      <div class="footer-highlights">
+        <span class="highlight-item">Buka 24 jam</span>
+        <span class="highlight-item">Pelayanan Ramah</span>
+        <span class="highlight-item">Barang lengkap</span>
+      </div>
+      
+      <p class="footer-about">
+        Toko Umar Faruq adalah toko yang menyediakan segala macam kebutuhanmu terutama diwaktu terdesak.
+      </p>
+    </div>
+    
+    <!-- Links Section -->
+    <div class="footer-section">
+      <h3 class="footer-title">Menu</h3>
+      <ul class="footer-links">
+        <li><a href="./menu.html">Menu</a></li>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about-us.html">Tentang Kami</a></li>
+            <li><a href="./contact-us.html">Kontak</a></li>
+      </ul>
+    </div>
+    
+    <!-- Contact Section -->
+    <div class="footer-section">
+      <h3 class="footer-title">Hubungi Kami</h3>
+      <div class="footer-contact-item">
+        <span class="footer-contact-icon">📍</span>
+        <span>Jl. Nusa Indah No.20, Jember</span>
+      </div>
+      <div class="footer-contact-item">
+        <span class="footer-contact-icon">📞</span>
+        <span>(031) 1234-5678</span>
+      </div>
+      <div class="footer-contact-item">
+        <span class="footer-contact-icon">✉️</span>
+        <span>info@warningmadura.com</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <p>&copy; 2025 Warmad Umar Faruq. Tempat Paling Setia Setelah Rumah.</p>
+  </div>
+</footer>
+    <script src="./src/js/menu.js"></script>
+    <script src="./src/js/all.js"></script>
+  </body>
+</html>
